@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash -e
 for i in `ls *.csl`; do
 	rm -f "$i"
-	curl -sSO "https://raw.githubusercontent.com/citation-style-language/styles/master/$i"
+	curl -sO --show-error -f "https://raw.githubusercontent.com/citation-style-language/styles/master/$i"
 done
